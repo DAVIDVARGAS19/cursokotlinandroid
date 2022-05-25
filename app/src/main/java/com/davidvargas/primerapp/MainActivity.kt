@@ -8,9 +8,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        variables()
+        operacionesAritmeticas()
+        operadoresLogicos()
     }
 
-    fun main() {
+    fun variables() {
 
         var miVariable = "Hola, soy una variable"
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,24 +57,28 @@ class MainActivity : AppCompatActivity() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //LOG O PRINTLN
         Log.d("", "")
+        Log.d(" LOG", "")
+        Log.d("", "")
         Log.d("", "")
         Log.d("   INDICATIVO", "Mensaje a mostrar")
         Log.d("", "")
         Log.d("", "")
+    }
 
+    fun operacionesAritmeticas() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //OPERACIONES ARITMETICAS
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERACIONES ARITMETICAS
-        Log.d("","")
-        Log.d("OPERACIONES ARITMETICAS","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d("OPERACIONES ARITMETICAS", "")
+        Log.d("", "")
 
         var x: Int = 23
         val y: Int = 5
-        var resultado: Int
+        var resultado: Int = 0
 
         resultado = x + y
         Log.d("   SUMA", "X + Y es igual a: $resultado")
@@ -90,9 +97,9 @@ class MainActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERADOR ASIGNACION
-        Log.d("","")
-        Log.d(" OPERADOR ASIGNACION","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d(" OPERADOR ASIGNACION", "")
+        Log.d("", "")
 
         /****************************************************
          * SUMA                    A += B     A = A + B
@@ -119,41 +126,41 @@ class MainActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERADOR CONCATENAR
-        Log.d("","")
-        Log.d(" CONCATENAR","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d(" CONCATENAR", "")
+        Log.d("", "")
 
         val texto: String = "Mi nombre es: "
-        val nombre:String = "David"
+        val nombre: String = "David"
 
-        Log.d("  CONCATENAR 1",texto + nombre + " y vivo en Envigado")
-        Log.d("","")
-        Log.d("  CONCATENAR 2","$texto $nombre  y vivo en Envigado")
+        Log.d("  CONCATENAR 1", texto + nombre + " y vivo en Envigado")
+        Log.d("", "")
+        Log.d("  CONCATENAR 2", "$texto $nombre  y vivo en Envigado")
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERADOR ICREMENTO DECREMENTO
-        Log.d("","")
-        Log.d(" INCREMENTO","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d(" INCREMENTO", "")
+        Log.d("", "")
 
         var numero: Int = 23
-        Log.d("   INCREMENTO","El resultafo es" + ++numero)//SIGUE VALIENDO 23
-        Log.d("   INCREMENTO","El resultafo es" + numero)
-        Log.d("   INCREMENTO","El resultafo es" + numero++)
+        Log.d("   INCREMENTO", "El resultafo es" + ++numero)//SIGUE VALIENDO 23
+        Log.d("   INCREMENTO", "El resultafo es" + numero)
+        Log.d("   INCREMENTO", "El resultafo es" + numero++)
 
-        Log.d("","")
-        Log.d(" DECREMENTO","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d(" DECREMENTO", "")
+        Log.d("", "")
 
         numero = 23
-        Log.d("   DECREMENTO","El resultafo es" + --numero)//SIGUE VALIENDO 23
-        Log.d("   DECREMENTO","El resultafo es" + numero)
-        Log.d("   DECREMENTO","El resultafo es" + numero--)
+        Log.d("   DECREMENTO", "El resultafo es" + --numero)//SIGUE VALIENDO 23
+        Log.d("   DECREMENTO", "El resultafo es" + numero)
+        Log.d("   DECREMENTO", "El resultafo es" + numero--)
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERADORES DE COMPARACION
-        Log.d("","")
-        Log.d(" COMPARACION","")
-        Log.d("","")
+        Log.d("", "")
+        Log.d(" COMPARACION", "")
+        Log.d("", "")
         /*************************************
          * < MENOR QUE
          * > MAYOR QUE
@@ -165,44 +172,122 @@ class MainActivity : AppCompatActivity() {
          * NOS DEVUELVE true O false
          */
 
-        var a : Int = 5
-        var b : Int = 6
+        var a: Int = 5
+        var b: Int = 6
 
-        Log.d("   MENOR QUE","a < b: " + (a<b))
-        Log.d("   MAYOR QUE","a > b: " + (a>b))
-        Log.d("   MENOR O IGUAL QUE","a <= b: " + (a<=b))
-        Log.d("   MAYOR O IGUAL QUE","a >= b: " + (a>=b))
-        Log.d("   IGUAL QUE","a == b: " + (a==b))
-        Log.d("   DIFERENTE A","a !=b: " + (a!=b))
+        Log.d("   MENOR QUE", "a < b: " + (a < b))
+        Log.d("   MAYOR QUE", "a > b: " + (a > b))
+        Log.d("   MENOR O IGUAL QUE", "a <= b: " + (a <= b))
+        Log.d("   MAYOR O IGUAL QUE", "a >= b: " + (a >= b))
+        Log.d("   IGUAL QUE", "a == b: " + (a == b))
+        Log.d("   DIFERENTE A", "a !=b: " + (a != b))
 
+    }
+
+    fun operadoresLogicos() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //OPERADORES LOGICOS
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //IF ELSE
+        Log.d("", "")
+        Log.d(" IF ELSE", "")
+        Log.d("", "")
 
+        var a = 5
+        if ((a % 2) == 0) {
+            Log.d("   IF", "El numero: " + a + "es par.")
+        } else {
+            Log.d("   ELSE", "El numero: " + a + "es impar.")
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //WHEN
+        Log.d("", "")
+        Log.d(" WHEN", "")
+        Log.d("", "")
 
+        a = 78
+
+        when (a) {
+            1 -> Log.d("   FORMA 1", "El numero a es igual a 1")
+            2 -> Log.d("   FORMA 1", "El numero a es igual a 2")
+            3 -> Log.d("   FORMA 1", "El numero a es igual a 3")
+            4 -> Log.d("   FORMA 1", "El numero a es igual a 4")
+            else -> Log.d("   FORMA else", "El numero a no esta comprendida entre 1 y 4")
+        }
+
+        when (a) {
+            in 1..4 -> Log.d("   FORMA 2", "El numero a esta comprendida entre 1 y 4")
+            else -> {
+                Log.d("   FORMA else", "El numero a no esta comprendida entre 1 y 4")
+            }
+        }
+
+        when (a) {
+            1, 2, 3, 4 -> Log.d("   FORMA 3", "El numero a esta comprendida entre 1 y 4")
+            else -> {
+                Log.d("   FORMA 3", "El numero a no esta comprendida entre 1 y 4")
+            }
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //FOR
+        Log.d("", "")
+        Log.d(" FOR", "")
+        Log.d("", "")
 
+        for (numero in 30..40) {
+            Log.d("   FOR", "El valor es: $numero")
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //WHILE
+        Log.d("", "")
+        Log.d(" WHILE", "")
+        Log.d("", "")
 
-
+        var contador: Int = 1
+        while (contador <= 10) {
+            Log.d("   WHILE", "El valos es: $contador")
+            contador++
+        }
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //DO WHILE
+        Log.d("", "")
+        Log.d(" DO WHILE", "")
+        Log.d("", "")
 
-
+        contador = 15
+        do {
+            Log.d("   DO WHILE", "El valor es: $contador")
+        } while (contador <= 10)
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //BREAK Y CONTINUE
+        Log.d("", "")
+        Log.d(" BREAK Y CONTINUE", "")
+        Log.d("", "")
 
-
+        //BREAK
+        contador = 1
+        while (contador <= 10) {
+            Log.d("   BREAK", "El valos es: $contador")
+            contador++
+            if (contador == 5) {
+                break
+            }
+        }
+        //CONTINUE
+        contador = 1
+        while (contador <= 10) {
+            Log.d("   BREAK", "El valos es: $contador")
+            contador++
+            if (contador == 5) {
+                continue
+            }
+            Log.d("   CONTINUE", "El valor es: $contador")
+        }
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
