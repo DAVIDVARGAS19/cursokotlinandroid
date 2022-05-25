@@ -3,6 +3,7 @@ package com.davidvargas.primerapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         variables()
         operacionesAritmeticas()
         operadoresLogicos()
+        arrays()
     }
 
     fun variables() {
@@ -289,7 +291,78 @@ class MainActivity : AppCompatActivity() {
             Log.d("   CONTINUE", "El valor es: $contador")
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     }
+
+    fun arrays() {
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //ARRAY
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Log.d("", "")
+        Log.d(" ARRAY", "")
+        Log.d("", "")
+        val canalesTV = arrayOf("La 1", "La 2", "Antena 3", "cuatro", "Tele 5", "Sexta")
+        Log.d("  ARRAY", "La primera cadena de TV es: ${canalesTV[0]}")
+        Log.d("  ARRAY", "La segunda cadena de TV es: ${canalesTV[1]}")
+        Log.d("  ARRAY", "La tercera cadena de TV es: ${canalesTV[2]}")
+        canalesTV.set(2, "A3")
+        Log.d("  CAMBIO OBJETO ARRAY", "La tercera cadena de TV es: ${canalesTV[2]}")
+        Log.d("  CANTIDAD ARRAY", "El numero de cadenas es: ${canalesTV.size}")
+
+        for (canalTV in canalesTV) {
+            Log.d("  ARRAY", canalTV)
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //ARRAYLIST
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Log.d("", "")
+        Log.d(" ARRAYLIST", "")
+        Log.d("", "")
+
+        val arrayListCanalesTV = ArrayList<String>()
+        arrayListCanalesTV.add("La 1")
+        arrayListCanalesTV.add("La 2")
+        arrayListCanalesTV.add("A3")
+
+        Log.d("   ARRAYLIST", "El canal numero 2 es: ${arrayListCanalesTV[1]}")
+        arrayListCanalesTV.set(1, "Mi canal favorito")
+        arrayListCanalesTV.remove("A3")
+
+        Log.d("  CANTIDAD ARRAYLIST", "Numero de canales: ${arrayListCanalesTV.size}")
+
+        if (arrayListCanalesTV.contains("A3")) {
+            Log.d("   ENCONTAR ARRAYLIST","Tu TV puede ver A3")
+        }else{
+            Log.d("   ENCONTAR ARRAYLIST","Tu TV no puede ver A3")
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //HASHMAP
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Log.d("", "")
+        Log.d(" HASH MAP", "")
+        Log.d("", "")
+        val hashMapCanalesTV= HashMap<Int, String>()
+        hashMapCanalesTV.put(1,"La 1")
+        hashMapCanalesTV.put(2,"La 2")
+        hashMapCanalesTV.put(3,"La A3")
+        Log.d("   HASH MAP","${hashMapCanalesTV[2]}")
+        hashMapCanalesTV.put(2, "No se ve este canal")
+
+        for (claves in hashMapCanalesTV.keys){
+            Log.d("   HASHMAP","${hashMapCanalesTV[claves]}")
+        }
+    }
+
 }
