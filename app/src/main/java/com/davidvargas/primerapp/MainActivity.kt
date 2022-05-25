@@ -12,14 +12,19 @@ class MainActivity : AppCompatActivity() {
         variables()                       //ACCESO A LA FUNCION VARIABLES
         operacionesAritmeticas()          //ACCESO A LA FUNCION OPERACIONES ARITMETICAS
         operadoresLogicos()               //ACCESO A LA FUNCION OPERADORES LOGICOS
-        arrays()                          //ACCESO A LA FUNCION VARIABLES
+        arrays()                          //ACCESO A LA FUNCION ARRAYS
+        clases()                          //ACCESO A LA FUNCION CLASES
     }
 
     fun variables() {
 
-        var miVariable = "Hola, soy una variable"
         ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         //TIPOS DE VARIABLES
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var miVariable = "Hola, soy una variable"
 
         //INT
         var miNumero: Int = 1000
@@ -75,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERACIONES ARITMETICAS
         Log.d("", "")
-        Log.d("OPERACIONES ARITMETICAS", "")
+        Log.d(" OPERACION ARITMETICA", "")
         Log.d("", "")
 
         var x: Int = 23
@@ -112,9 +117,9 @@ class MainActivity : AppCompatActivity() {
          ****************************************************/
 
         x = 23
-
+Log.d("x","23")
+        Log.d("","")
         //x = x + 5
-
         x += 5
         Log.d("   SUMA ASIGNACION", "X es igual a: $x")
         x -= 5
@@ -135,9 +140,9 @@ class MainActivity : AppCompatActivity() {
         val texto: String = "Mi nombre es: "
         val nombre: String = "David"
 
-        Log.d("  CONCATENAR 1", texto + nombre + " y vivo en Envigado")
+        Log.d("   CONCATENAR 1", texto + nombre + " y vivo en Envigado")
         Log.d("", "")
-        Log.d("  CONCATENAR 2", "$texto $nombre  y vivo en Envigado")
+        Log.d("   CONCATENAR 2", "$texto $nombre  y vivo en Envigado")
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         //OPERADOR ICREMENTO DECREMENTO
         Log.d("", "")
@@ -365,4 +370,17 @@ class MainActivity : AppCompatActivity() {
         }
     }                   //FUNCION OPERADORES LOGICOS
 
+
+    fun clases(){
+
+        val smartPhone1=SmartPhone1("SAMSUNG"," A31")
+        val smartPhone2=SmartPhone2("LG"," Lk-200")
+
+        Log.d("   CLASES","$smartPhone1")
+        Log.d("   CLASES","$smartPhone2")
+
+        smartPhone1.fabricantes= "GALAXY"
+        Log.d("   CLASES","$smartPhone1")
+        Log.d("   CLASES","$smartPhone2")
+    }
 }
