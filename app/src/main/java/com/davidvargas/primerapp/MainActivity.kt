@@ -9,10 +9,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        variables()
-        operacionesAritmeticas()
-        operadoresLogicos()
-        arrays()
+        variables()                       //ACCESO A LA FUNCION VARIABLES
+        operacionesAritmeticas()          //ACCESO A LA FUNCION OPERACIONES ARITMETICAS
+        operadoresLogicos()               //ACCESO A LA FUNCION OPERADORES LOGICOS
+        arrays()                          //ACCESO A LA FUNCION VARIABLES
     }
 
     fun variables() {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("   INDICATIVO", "Mensaje a mostrar")
         Log.d("", "")
         Log.d("", "")
-    }
+    }                //FUNCION VARIABLES
 
     fun operacionesAritmeticas() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -184,7 +184,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("   IGUAL QUE", "a == b: " + (a == b))
         Log.d("   DIFERENTE A", "a !=b: " + (a != b))
 
-    }
+    }   //FUNCION OPERACIONES ARITMETICAS
 
     fun operadoresLogicos() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -294,7 +294,7 @@ class MainActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    }
+    }        //FUNCION OPERADORES LOGICOS
 
     fun arrays() {
 
@@ -363,6 +363,6 @@ class MainActivity : AppCompatActivity() {
         for (claves in hashMapCanalesTV.keys){
             Log.d("   HASHMAP","${hashMapCanalesTV[claves]}")
         }
-    }
+    }                   //FUNCION OPERADORES LOGICOS
 
 }
