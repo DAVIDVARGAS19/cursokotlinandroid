@@ -1,9 +1,10 @@
 package com.davidvargas.primerapp
 
+import SmartPhone.SmartPhone1
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlin.math.log
+import calculadora.Cientifica
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         operacionesAritmeticas()          //ACCESO A LA FUNCION OPERACIONES ARITMETICAS
         operadoresLogicos()               //ACCESO A LA FUNCION OPERADORES LOGICOS
         arrays()                          //ACCESO A LA FUNCION ARRAYS
-        clases()                          //ACCESO A LA FUNCION CLASES
+        POO()                             //ACCESO A LA FUNCION POO
     }
 
-    fun variables() {
+    private fun variables() {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("", "")
     }                //FUNCION VARIABLES
 
-    fun operacionesAritmeticas() {
+    private fun operacionesAritmeticas() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //OPERACIONES ARITMETICAS
@@ -117,8 +118,8 @@ class MainActivity : AppCompatActivity() {
          ****************************************************/
 
         x = 23
-Log.d("x","23")
-        Log.d("","")
+        Log.d("x", "23")
+        Log.d("", "")
         //x = x + 5
         x += 5
         Log.d("   SUMA ASIGNACION", "X es igual a: $x")
@@ -191,7 +192,7 @@ Log.d("x","23")
 
     }   //FUNCION OPERACIONES ARITMETICAS
 
-    fun operadoresLogicos() {
+    private fun operadoresLogicos() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //OPERADORES LOGICOS
@@ -301,7 +302,7 @@ Log.d("x","23")
 
     }        //FUNCION OPERADORES LOGICOS
 
-    fun arrays() {
+    private fun arrays() {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -342,12 +343,12 @@ Log.d("x","23")
         arrayListCanalesTV.set(1, "Mi canal favorito")
         arrayListCanalesTV.remove("A3")
 
-        Log.d("  CANTIDAD ARRAYLIST", "Numero de canales: ${arrayListCanalesTV.size}")
+        Log.d("   CANTIDAD ARRAYLIST", "Numero de canales: ${arrayListCanalesTV.size}")
 
         if (arrayListCanalesTV.contains("A3")) {
-            Log.d("   ENCONTAR ARRAYLIST","Tu TV puede ver A3")
-        }else{
-            Log.d("   ENCONTAR ARRAYLIST","Tu TV no puede ver A3")
+            Log.d("   ENCONTAR ARRAYLIST", "Tu TV puede ver A3")
+        } else {
+            Log.d("   ENCONTAR ARRAYLIST", "Tu TV no puede ver A3")
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -358,29 +359,131 @@ Log.d("x","23")
         Log.d("", "")
         Log.d(" HASH MAP", "")
         Log.d("", "")
-        val hashMapCanalesTV= HashMap<Int, String>()
-        hashMapCanalesTV.put(1,"La 1")
-        hashMapCanalesTV.put(2,"La 2")
-        hashMapCanalesTV.put(3,"La A3")
-        Log.d("   HASH MAP","${hashMapCanalesTV[2]}")
+        val hashMapCanalesTV = HashMap<Int, String>()
+        hashMapCanalesTV.put(1, "La 1")
+        hashMapCanalesTV.put(2, "La 2")
+        hashMapCanalesTV.put(3, "La A3")
+        Log.d("   HASH MAP", "${hashMapCanalesTV[2]}")
         hashMapCanalesTV.put(2, "No se ve este canal")
 
-        for (claves in hashMapCanalesTV.keys){
-            Log.d("   HASHMAP","${hashMapCanalesTV[claves]}")
+        for (claves in hashMapCanalesTV.keys) {
+            Log.d("   HASHMAP", "${hashMapCanalesTV[claves]}")
         }
     }                   //FUNCION OPERADORES LOGICOS
 
+    private fun POO() {
 
-    fun clases(){
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        val smartPhone1=SmartPhone1("SAMSUNG"," A31")
-        val smartPhone2=SmartPhone2("LG"," Lk-200")
+        //POO
 
-        Log.d("   CLASES","$smartPhone1")
-        Log.d("   CLASES","$smartPhone2")
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        smartPhone1.fabricantes= "GALAXY"
-        Log.d("   CLASES","$smartPhone1")
-        Log.d("   CLASES","$smartPhone2")
+        Log.d("", "")
+        Log.d(" POO", "")
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //CLASES
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Log.d("", "")
+        Log.d(" CLASES", "")
+        Log.d("", "")
+
+        SmartPhone1("", "")                  //CLASE 1
+
+        var smartPhone1 = SmartPhone1("SAMSUNG", " A31")
+        var smartPhone2 = SmartPhone1("LG", " Lk-200")
+
+        Log.d("   CLASES", "$smartPhone1")
+        Log.d("   CLASES", "$smartPhone2")
+
+        smartPhone1.fabricante1 = "GALAXY"
+
+        Log.d("   CLASES", "$smartPhone1")
+        Log.d("   CLASES", "$smartPhone2")
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //MODIFICADORES DE VISIBILIDAD
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /*
+        * SE LE AGREGO UNOS PARAMETROS DE VISIBILIDAD
+        * PRIVATE
+        * ABSTRACT
+        * PUBLIC
+        * PROTECTED
+        * OPEN
+        * */
+
+        /*ESTOS MODIFICADORES NOS PERMITEN ACCEDER O NO A CLASES, FUNCIONES, VARIABLES, Y DEMAS TIPOS DE DATOS.
+        *
+        *
+        * ELIMINAR "//"  PARA OBSERVAR LOS CAMBIOS
+        *
+        * */
+
+        //SmartPhone2("", "")                  //CLASE 2
+
+        Log.d("", "")
+        Log.d(" VISIBILIDAD", "PARA OBSERVAR CAMBIOS ACCEDA AL MAIN")
+        Log.d("", "")
+
+        // val smartPhone3 = SmartPhone2("XIAOMI", " POCO X3")
+        // val smartPhone4 = SmartPhone2("IPHONE", " 12 PRO MAX")
+
+        Log.d("   VISIBILIDAD", "$smartPhone1")
+        Log.d("   VISIBILIDAD", "$smartPhone2")
+        //Log.d("   VISIBILIDAD", "$smartPhone3")
+        //Log.d("   VISIBILIDAD", "$smartPhone4")
+
+        smartPhone1.fabricante1 = "GALAXY"
+        smartPhone2.fabricante1 = "ZTE"
+        //smartPhone3.fabricante2 = "REDMI"
+        //smartPhone4.fabricante2 = "APPLE"
+
+        Log.d("", "")
+        Log.d(" CAMBIO DE DATOS", "")
+        Log.d("", "")
+
+        Log.d("   VISIBILIDAD", "$smartPhone1")
+        Log.d("   VISIBILIDAD", "$smartPhone2")
+        //Log.d("   VISIBILIDAD", "$smartPhone3")
+        //Log.d("   VISIBILIDAD", "$smartPhone4")
+        Log.d("", "")
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //HERENCIA
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Log.d("", "")
+        Log.d(" HERANCIA DE CLASES", "")
+        Log.d("", "")
+
+
+        Log.d(
+            "           ",
+            "SE CREAN 2 CLASES LLAMADAS \"Cientifica\" QUE HEREDA DE \"Calculadora\", LA CUAL TIENE\n"
+        )
+        Log.d(
+            "           ",
+            "ATRIBUTOS QUE SON A Y B LAS CUALES SON NUMEROS ENTEROS PARA PERMITIR LA EJECUCION DE\n"
+        )
+        Log.d("           ", "LAS FUNCIONES QUE LA CONSTRUYEN.")
+
+
+        val calCientifica = Cientifica()
+
+        Log.d(" HERENCIA", " Valor suma: ${calCientifica.suma(4, 8)}")
+        Log.d(" HERENCIA", " Valor resta: ${calCientifica.resta(4, 8)}")
+        Log.d(" HERENCIA", " Valor multiplicacion: ${calCientifica.multiplicacion(4, 8)}")
+
+
     }
 }
