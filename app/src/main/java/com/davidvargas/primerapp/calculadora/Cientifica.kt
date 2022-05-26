@@ -1,6 +1,4 @@
-package calculadora
-
-import calculadora.Calculadora
+package com.davidvargas.primerapp.calculadora
 
 class Cientifica() : Calculadora() {
 

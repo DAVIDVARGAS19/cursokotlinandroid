@@ -1,4 +1,4 @@
-package Trabajo
+package com.davidvargas.primerapp.Trabajo
 
 interface Trabajo {
 

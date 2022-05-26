@@ -1,4 +1,4 @@
-package calculadora
+package com.davidvargas.primerapp.calculadora
 
 open class Calculadora() {
 

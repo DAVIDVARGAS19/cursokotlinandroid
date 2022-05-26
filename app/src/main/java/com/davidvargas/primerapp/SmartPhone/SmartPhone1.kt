@@ -1,4 +1,4 @@
-package SmartPhone
+package com.davidvargas.primerapp.SmartPhone
 
 class SmartPhone1( var fabricante1: String, var modelo1: String) {
 

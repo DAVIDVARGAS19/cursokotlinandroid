@@ -1,10 +1,10 @@
 package com.davidvargas.primerapp
 
-import SmartPhone.SmartPhone1
+import com.davidvargas.primerapp.SmartPhone.SmartPhone1
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import calculadora.Cientifica
+import com.davidvargas.primerapp.calculadora.Cientifica
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
